@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,6 +9,15 @@
 
 <body>
     <main id="main-doc">Python Documentations
+
+
+        <nav id="navbar"> 
+            <header>Python Documentations</header>
+            <a href="" class="nav-link">Introduction</a>
+            <a href="" class="nav-link">What you should already know</a>
+            <a href="" class="nav-link">Hello World</a>
+            <a href="" class="nav-link">Introduction</a>
+        </nav>
         <section class="main-section" id="s1">
             <header>Introduction</header>
         </section>
@@ -96,8 +105,8 @@
                 <br>
             </code>
             <h4>Multiple Assignments</h4>
-           <p>
-            You can assign multiple variables in one line.</p> 
+            <p>
+                You can assign multiple variables in one line.</p>
         </section>
         <code>
             x, y, z = 1, 2, 3 <br>
@@ -122,7 +131,7 @@ print(type(y))
             <header>
                 Global and local Variables
             </header>
-            
+
             <code>
                 x = "global" <br>
 
@@ -155,7 +164,7 @@ print(x)
                 Data types
             </header>
             <p>
-               <ol>
+            <ol>
                 <li>NUmeric types
                     <ul>
                         <li>Integer</li>
@@ -171,20 +180,20 @@ print(x)
                         <li>String </li>
                         <code>greeting = 'Hello' <br> paragraph = """This is a
                             multi-line string.""" </code>
-                            <li>List</li>
-                            <code>numbers = [1, 2, 3, 4] <br>
+                        <li>List</li>
+                        <code>numbers = [1, 2, 3, 4] <br>
                                 mixed = [1, "hello", 3.5]</code>
-                            <li>Tuple (An ordered, immutable collection of items.)
-                            </li>
-                            <code>
+                        <li>Tuple (An ordered, immutable collection of items.)
+                        </li>
+                        <code>
                                 coordinates = (10, 20) <br>
 colors = ("red", "green", "blue")
                             </code>
-                            <li>
-                                Range (Represents a sequence of numbers, commonly used in loops.
-                                )
-                            </li>
-                            <code>r = range(5)  # 0, 1, 2, 3, 4</code>
+                        <li>
+                            Range (Represents a sequence of numbers, commonly used in loops.
+                            )
+                        </li>
+                        <code>r = range(5)  # 0, 1, 2, 3, 4</code>
                     </ul>
                 </li>
                 <li>Mapping types
@@ -204,18 +213,551 @@ print(type(person))
                             unique_numbers = {1, 2, 3, 4} <br>
 print(type(unique_numbers))
                         </code>
-                        <li>Frozen set - an</li>
+                        <li>Frozen set - an< immutable version of a set</li>
+                                <code>
+                            frozen = frozenset([1, 2, 3])
+print(type(frozen)) 
+                        </code>
                     </ul>
                 </li>
-                <li>Boolean types</li>
-                <li>Binary types</li>
-                <li>None type</li>
-               </ol>
+                <li>Boolean types
+                    <ul>
+                        <li>
+                            <code>
+                                flag = True <br>
+                                Flag = False
+                            </code>
+                        </li>
+                    </ul>
+
+                </li>
+                <li>Binary types
+                    <ul>
+                        <li>
+                            Bytes -
+                            Immutable sequence of bytes.
+                        </li>
+                        <code>
+                            data = b"hello"
+print(type(data))
+                        </code>
+                        <li>
+                            Bytearray -
+                            Mutable sequence of bytes.
+                        </li>
+                        <code>
+                            data = bytearray(5)
+                        </code>
+                        <li>
+                            Memoryview (memoryview) -
+                            Provides a view object of the memory of another binary object.
+                        </li>
+                        <code>
+                            data = memoryview(b"hello")
+
+                        </code>
+                    </ul>
+                </li>
+                <li>None type
+                    - Represents the absence of a value or a null value.
+                    <ul>
+                        <li>
+                            <code>
+                                x = None <br>
+            print(type(x))
+                            </code>
+                        </li>
+                    </ul>
+                </li>
+
+            </ol>
             </p>
+
+        </section>
+
+        
+
+        <section class="main-section" id="s3">
+            <header>
+                If...else statement
+            </header>
+            <p>
+                In Python, there isn't a direct ifelse construct like in some other programming languages. Instead,
+                Python uses the if, elif, and else statements for conditional logic. Here's an example:
+            </p>
+            <code>
+                x = 10
+
+if x > 10: <br>
+    print("x is greater than 10") <br>
+elif x == 10: <br>
+    print("x is equal to 10") <br>
+else: <br>
+    print("x is less than 10")
+
+            </code>
+
+            <p>Ternary if-else in Python</p>
+            <code>result = "x is greater than 10" if x > 10 else "x is 10 or less" <br>
+                print(result)
+                </code>
+        </section>
+
+        <section class="main-section" id="s3">
+            <header>
+                Switch Statement
+            </header>
+            <p>
+                Here is the simplest of python codes.
+            </p>
+            <code>
+                count = 0 <br>
+
+while count < 5: <br>
+    print("Count is:", count) <br>
+    count += 1  <br>
+
+            </code>
+
+            <p>Infinite loop</p>
+            <code>while True:
+                print("This is an infinite loop!")  
+            </code>
+            <p>You can use the <code>break</code> statement to exit the loop prematurely</p>
+            <code>count = 0 <br>
+                while True: <br>
+                    if count >= 5: <br>
+                        break <br>
+                    print("Count is:", count) <br>
+                    count += 1
+                </code> 
+                <p>The <code>continue</code> statement skips the rest of the code in the current iteration and moves to the next iteration.</p>
+                <code>
+                    count = 0  <br>
+                    while count < 5: <br>
+                        count += 1 <br>
+                        if count == 3: <br>
+                            continue   <br>
+                        print("Count is:", count) <br>
+                    
+                </code>
+                
+            </section>
+
+            <section class="main-section" id="s3">
+                <header>
+                    Method declarations
+                </header>
+                <p>
+                    Methods are typically declared inside classes and are used to define the behavior of the objects created from the class
+                </p>
+                <code>
+                    class MyClass: <br>
+    def my_method(self): <br>
+        print("This is a method.") <br>
+ 
+                </code>
+                <p>Method with parameters</p>
+                <code>
+                    class Calculator: <br>
+    def add(self, a, b): <br>
+        return a + b <br>
+
+
+calc = Calculator() <br>
+result = calc.add(10, 20) <br>
+print("Sum:", result) <br>
+
+                </code>
+                <p>
+                    Method accessing instance Variables
+                </p>
+                <code>
+                    class Person: <br>
+    def __init__(self, name): <br>
+        self.name = name  # Instance variable <br>
+
+    def greet(self): <br> 
+        print(f"Hello, my name is {self.name}") <br>
+
+
+p = Person("Alice") <br> 
+p.greet() <br>
+
+                </code>
+                <p>Static method</p>
+                <code>
+                    class Utils: <br>
+    @staticmethod <br>
+    def multiply(a, b): <br>
+        return a * b <br>
+
+
+result = Utils.multiply(5, 6) <br>
+print("Product:", result) <br>
+
+                </code>
+            </section>
+
+
+           
+    </main>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        #navbar {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        #navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            float: left;
+        }
+
+        #navbar a:hover {
+            background-color: #575757;
+        }
+
+        .main-section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .main-section header {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ol {
+            margin-left: 20px;
+        }
+
+        #back-to-top {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #back-to-top a {
+            text-decoration: none;
+            color: #333;
+            background-color: #ddd;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        #back-to-top a:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Python Documentation</h1>
+    </header>
+
+    <nav id="navbar">
+        <a href="#s1" class="nav-link">Introduction</a>
+        <a href="#s2" class="nav-link">What You Should Know</a>
+        <a href="#s3" class="nav-link">Hello World</a>
+        <a href="#s4" class="nav-link">Variables</a>
+        <a href="#s5" class="nav-link">Checking Variable Types</a>
+        <a href="#s6" class="nav-link">Global and Local Variables</a>
+        <a href="#s7" class="nav-link">Data Types</a>
+        <a href="#s8" class="nav-link">If...else Statement</a>
+        <a href="#s9" class="nav-link">Loops</a>
+        <a href="#s10" class="nav-link">Method Declarations</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="s1">
+            <header>Introduction</header>
+            <p>Brainfuck is an esoteric programming language created in 1993 by Swiss student Urban Müller. Designed to
+                be extremely minimalistic, the language consists of only eight simple commands, a data pointer, and an
+                instruction pointer.</p>
+            <p>It is used in various fields such as <span style="font-weight: 900;">Web development, data science,
+                artificial intelligence, and automation</span></p>
+        </section>
+
+        <section class="main-section" id="s2">
+            <header>What You Should Know</header>
+            <p>This documentation assumes that you are already familiar with the following:</p>
+            <ul>
+                <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                <li>Some programming experience in any language.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="s3">
+            <header>Hello World</header>
+            <p>Here is the simplest Python code to print "Hello World".</p>
             <code>
                 print("Hello World")
             </code>
         </section>
+
+        <section class="main-section" id="s4">
+            <header>Variables</header>
+            <p>In Python, variables are used to store data values. Variables do not need explicit declaration to be
+                created. A variable is created the moment you assign a value to it.</p>
+            <p>Python is dynamically typed, meaning you don't need to declare the type of a variable explicitly. The
+                type is inferred based on the value.</p>
+            <h4>Variable Naming Conventions</h4>
+            <ul>
+                <li>Variable names must start with a letter or an underscore (_).</li>
+                <li>Variable names cannot start with a number.</li>
+                <li>Variable names are case-sensitive (e.g., <code>name</code> and <code>Name</code> are different).</li>
+                <li>Python has reserved keywords that cannot be used as variable names (e.g., <code>if</code>, <code>while</code>, <code>return</code>).</li>
+            </ul>
+
+            <code>
+                x = 10<br>
+                y = 3.14<br>
+                name = "Python"<br>
+
+                # Printing variables<br>
+                print(x)<br>
+                print(y)<br>
+                print(name)<br>
+            </code>
+            <h4>Multiple Assignments</h4>
+            <p>You can assign multiple variables in one line.</p>
+            <code>
+                x, y, z = 1, 2, 3<br>
+                a = b = c = 0
+            </code>
+        </section>
+
+        <section class="main-section" id="s5">
+            <header>Checking Variable Types</header>
+            <p>Use the <code>type()</code> function to check the type of a variable.</p>
+            <code>
+                x = 10<br>
+                print(type(x))<br>
+
+                y = "Hello"<br>
+                print(type(y))
+            </code>
+        </section>
+
+        <section class="main-section" id="s6">
+            <header>Global and Local Variables</header>
+            <p>In Python, variables defined inside a function are local to that function, while variables defined outside
+                of a function are global. To modify a global variable inside a function, use the <code>global</code>
+                keyword.</p>
+            <code>
+                x = "global"<br>
+
+                def my_function():<br>
+                    y = "local"<br>
+                    print(x)<br>
+                    print(y)<br>
+
+                my_function()<br>
+                print(x)
+            </code>
+
+            <code>
+                def modify_global():<br>
+                    global x<br>
+                    x = "modified"<br>
+
+                modify_global()<br>
+                print(x)
+            </code>
+        </section>
+
+        <section class="main-section" id="s7">
+            <header>Data Types</header>
+            <p>Python supports various data types. Here are some of them:</p>
+            <ol>
+                <li>Numeric Types:
+                    <ul>
+                        <li>Integer: <code>x = 10</code></li>
+                        <li>Float: <code>pi = 3.14</code></li>
+                        <li>Complex: <code>z = 2 + 3j</code></li>
+                    </ul>
+                </li>
+                <li>Sequence Types:
+                    <ul>
+                        <li>String: <code>greeting = 'Hello'</code></li>
+                        <li>List: <code>numbers = [1, 2, 3]</code></li>
+                        <li>Tuple: <code>coordinates = (10, 20)</code></li>
+                        <li>Range: <code>r = range(5)</code></li>
+                    </ul>
+                </li>
+                <li>Mapping Types:
+                    <ul>
+                        <li>Dictionary: <code>person = {"name": "Alice", "age": 25}</code></li>
+                    </ul>
+                </li>
+                <li>Set Types:
+                    <ul>
+                        <li>Set: <code>unique_numbers = {1, 2, 3}</code></li>
+                        <li>Frozen Set: <code>frozen = frozenset([1, 2, 3])</code></li>
+                    </ul>
+                </li>
+                <li>Boolean Types:
+                    <ul>
+                        <li><code>flag = True</code></li>
+                    </ul>
+                </li>
+                <li>Binary Types:
+                    <ul>
+                        <li>Bytes: <code>data = b"hello"</code></li>
+                        <li>Bytearray: <code>data = bytearray(5)</code></li>
+                        <li>Memoryview: <code>data = memoryview(b"hello")</code></li>
+                    </ul>
+                </li>
+                <li>None Type: <code>x = None</code></li>
+            </ol>
+        </section>
+
+        <section class="main-section" id="s8">
+            <header>If...else Statement</header>
+            <p>Python uses the <code>if</code>, <code>elif</code>, and <code>else</code> statements for conditional logic.</p>
+            <code>
+                x = 10<br>
+                if x > 10:<br>
+                    print("x is greater than 10")<br>
+                elif x == 10:<br>
+                    print("x is equal to 10")<br>
+                else:<br>
+                    print("x is less than 10")
+            </code>
+
+            <p>Ternary if-else in Python:</p>
+            <code>
+                result = "x is greater than 10" if x > 10 else "x is 10 or less"<br>
+                print(result)
+            </code>
+        </section>
+
+        <section class="main-section" id="s9">
+            <header>Loops</header>
+            <p>Python supports <code>while</code> loops and <code>for</code> loops for iteration.</p>
+            <code>
+                count = 0<br>
+                while count < 5:<br>
+                    print("Count is:", count)<br>
+                    count += 1
+            </code>
+
+            <p>Infinite loop:</p>
+            <code>
+                while True:<br>
+                    print("This is an infinite loop!")
+            </code>
+
+            <p>Use <code>break</code> to exit a loop prematurely:</p>
+            <code>
+                count = 0<br>
+                while True:<br>
+                    if count >= 5:<br>
+                        break<br>
+                    print("Count is:", count)<br>
+                    count += 1
+            </code>
+
+            <p>Use <code>continue</code> to skip the rest of the current iteration:</p>
+            <code>
+                count = 0<br>
+                while count < 5:<br>
+                    count += 1<br>
+                    if count == 3:<br>
+                        continue<br>
+                    print("Count is:", count)
+            </code>
+        </section>
+
+        <section class="main-section" id="s10">
+            <header>Method Declarations</header>
+            <p>Methods are typically declared inside classes and define the behavior of objects created from the class.</p>
+            <code>
+                class MyClass:<br>
+                    def my_method(self):<br>
+                        print("This is a method.")
+            </code>
+
+            <p>Method with parameters:</p>
+            <code>
+                class Calculator:<br>
+                    def add(self, a, b):<br>
+                        return a + b<br>
+
+                calc = Calculator()<br>
+                result = calc.add(10, 20)<br>
+                print("Sum:", result)
+            </code>
+
+            <p>Accessing instance variables in methods:</p>
+            <code>
+                class Person:<br>
+                    def __init__(self, name):<br>
+                        self.name = name  # Instance variable<br>
+
+                    def greet(self):<br>
+                        print(f"Hello, my name is {self.name}")<br>
+
+                p = Person("Alice")<br>
+                p.greet()
+            </code>
+
+            <p>Static method:</p>
+            <code>
+                class Utils:<br>
+                    @staticmethod<br>
+                    def multiply(a, b):<br>
+                        return a * b<br>
+
+                result = Utils.multiply(5, 6)<br>
+                print("Product:", result)
+            </code>
+        </section>
+
+        <div id="back-to-top">
+            <a href="#main-doc">Back to Top</a>
+        </div>
     </main>
 </body>
 
