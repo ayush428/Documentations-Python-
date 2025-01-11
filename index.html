@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="main-doc">Python Documentations
+        <section class="main-section" id="s1">
+            <header>Introduction</header>
+        </section>
+        <p>
+            Brainfuck is an esoteric programming language created in 1993 by Swiss student Urban Müller.[1] Designed to
+            be extremely minimalistic, the language consists of only eight simple commands, a data pointer, and an
+            instruction pointer.
+        </p>
+        <p>
+            It is used in various fields such as <span style="font-weight: 900;">Web development, data science,
+                artificial intelligence and automation</span>
+        </p>
+        <section class="main-section" id="s2">
+            <header>
+                What you should already know
+            </header>
+            <p>
+                This documentation assumes that you are already familiar with the following:
+            <ul>
+                <li>
+                    A general understanding of the Internet and the World Wide Web(WWW)
+                </li>
+                <li>
+                    Some programming experience on any language.
+                </li>
+            </ul>
+            </p>
+        </section>
+        <section class="main-section" id="s3">
+            <header>
+                Hello World
+            </header>
+            <p>
+                Here is the simplest of python codes.
+            </p>
+            <code>
+                print("Hello World")
+            </code>
+        </section>
+        <section class="main-section" id="s4">
+            <header>
+                Variables
+            </header>
+            <p>
+                In Python, variables are used to store data values, like any other language. Variables do not need
+                explicit declaration to be
+                created. A variable is created the moment you assign a value to it.
+            </p>
+            <p>
+                Python is dynamically typed, meaning you don't need to declare the type of a variable explicitly. The
+                type is inferred based on the value.
+            </p>
+            <h4>Variable Naming conventions</h4>
+            <ul>
+                <li>
+                    Variable names must start with a letter or an underscore _.
+                </li>
+                <li>
+                    ariable names cannot start with a number.
+                </li>
+                <li>
+                    Variable names are case-sensitive (<code>name</code> and <code>Name</code> are different).
+                </li>
+                <li>
+                    Python has reserved keywords that cannot be used as variable names (e.g., <code>if</code>,
+                    <code>while</code>, <code>return</code> , etc.).
+                </li>
+            </ul>
+
+            <code>
+                x = 10        
+                <br>
+                y = 3.14    
+                <br>  
+                name = "Python" 
+                <br>
+
+                # Printing variables
+                <br>
+                print(x)     
+                <br>
+                print(y)      
+                <br>
+                print(name)   
+                <br>
+            </code>
+            <h4>Multiple Assignments</h4>
+           <p>
+            You can assign multiple variables in one line.</p> 
+        </section>
+        <code>
+            x, y, z = 1, 2, 3 <br>
+a = b = c = 0 
+        </code>
+        <section class="main-section" id="s5">
+            <header>
+                Checking Variable Types
+            </header>
+            <p>
+                Use the <code>type()</code> function to check the type of variable
+            </p>
+            <code>
+                x = 10 <br>
+print(type(x))  <br>
+
+y = "Hello"<br>
+print(type(y))
+            </code>
+        </section>
+        <section class="main-section" id="s6">
+            <header>
+                Global and local Variables
+            </header>
+            
+            <code>
+                x = "global" <br>
+
+                def my_function():br
+                    
+                    y = "local"<br>
+                    print(x)  <br>
+                    print(y)  <br>
+                    
+                <br>
+                my_function()<br>
+                print(x)
+            </code>
+            <p>To modify a global variable inside a function, use the global keyword.</p>
+            <br>
+
+            <code>
+                def modify_global():br
+    global x <br>
+    x = "modified"<br>
+
+modify_global() <br>
+print(x)  
+
+            </code>
+        </section>
+
+        <section class="main-section" id="s7">
+            <header>
+                Data types
+            </header>
+            <p>
+               <ol>
+                <li>NUmeric types
+                    <ul>
+                        <li>Integer</li>
+                        <code>x = 10</code>
+                        <li>Float</li>
+                        <code>pi=3.14</code>
+                        <li>complex(numbers with a real and imaginary part reresented as <code>a+bj</code> )</li>
+                        <code>z = 2 + 3j</code>
+                    </ul>
+                </li>
+                <li>Sequence types
+                    <ul>
+                        <li>String </li>
+                        <code>greeting = 'Hello' <br> paragraph = """This is a
+                            multi-line string.""" </code>
+                            <li>List</li>
+                            <code>numbers = [1, 2, 3, 4] <br>
+                                mixed = [1, "hello", 3.5]</code>
+                            <li>Tuple (An ordered, immutable collection of items.)
+                            </li>
+                            <code>
+                                coordinates = (10, 20) <br>
+colors = ("red", "green", "blue")
+                            </code>
+                            <li>
+                                Range (Represents a sequence of numbers, commonly used in loops.
+                                )
+                            </li>
+                            <code>r = range(5)  # 0, 1, 2, 3, 4</code>
+                    </ul>
+                </li>
+                <li>Mapping types
+                    <ul>
+                        <li>Dictionary - An unordered collection of key-value pairs. Keys must be unique and immutable.
+                        </li>
+                        <code>
+                            person = {"name": "Alice", "age": 25} <br>
+print(type(person))  
+                        </code>
+                    </ul>
+                </li>
+                <li>Set types
+                    <ul>
+                        <li>Set - an unordered collection of unique items</li>
+                        <code>
+                            unique_numbers = {1, 2, 3, 4} <br>
+print(type(unique_numbers))
+                        </code>
+                        <li>Frozen set - an</li>
+                    </ul>
+                </li>
+                <li>Boolean types</li>
+                <li>Binary types</li>
+                <li>None type</li>
+               </ol>
+            </p>
+            <code>
+                print("Hello World")
+            </code>
+        </section>
+    </main>
+</body>
+
+</html>
